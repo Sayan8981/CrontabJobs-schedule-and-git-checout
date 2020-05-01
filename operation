@@ -1,0 +1,28 @@
+Crontab Job schedulers:
+
+Note 1:
+
+** to open crontab in teminal 
+>> crontab -e
+
+Note 2:
+
+Following example to schedule the jobs in crontab:
+
+30 03 1 */1 * /usr/local/bin/lockrun --lockfile=/tmp/decider_showtime.lock -- bash -c "cd /home/headrun/HOTT/content_support_crawlers/Decider_showtime_crawler/decider_showtime_crawler/decider_showtime_crawler/spiders; scrapy crawl decidershowtimebrowse" 1>>/tmp/decider_showtime.log 2>>/tmp/decider_showtime.log
+
+Follow this link to schedule timing (https://crontab.guru/#*_*_*_*)
+
+
+Git checkout:
+
+Steps :
+
+1. git clone <the existing repository from Github> <to destination Folder>
+2. git checkout -b <branch_name> (# to create new branch name in following Repo.)
+3. If branch name exist, then git checkout <<branch_name>>
+4. find . -name "*.<extension_filename>" -exec rm -f {} \; (# to remove unwanated files before push ti github)
+5. git add <file_name>
+6. git commit -m "<put corresponding messages for the commit>"
+7. git push origin <branch_name> (if not master branch to push else git push)
+8. give credentials to push
